@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulir Pendaftaran GOGGS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: #1A202C;
+  }
+  .container {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #e0ecff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+    color: #1E3A8A;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+  }
+  .preview-box {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #dbeafe;
+    border-radius: 8px;
+    color: #1E3A8A;
+    font-size: 14px;
+    min-height: 60px;
+    white-space: pre-wrap;
+  }
+  button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #2563EB;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #1D4ED8;
+  }
+  .footer {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #374151;
+  }
+  .footer a {
+    color: #2563EB;
+    text-decoration: none;
+  }
+  .footer h3 {
+    color: #1E3A8A;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .bold-highlight {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Formulir Pendaftaran GOGGS</h2>
+  
+  <label>USERNAME FB :</label>
+  <input type="text" id="fb" placeholder="Masukkan Username FB">
+  
+  <label>NO WHATSAPP :</label>
+  <input type="text" id="wa" placeholder="Masukkan Nomor WA">
+  
+  <label>PERCHAT / PERJAM :</label>
+  <input type="text" id="rate" placeholder="Contoh: 400P/Chat atau 50K/Jam">
+  
+  <label>JENIS BANK / E-WALLET :</label>
+  <select id="bank">
+    <option value="">Bank - E-Wallet</option>
+    <option value="BCA">BCA</option>
+    <option value="BRI">BRI</option>
+    <option value="BNI">BNI</option>
+    <option value="MANDIRI">MANDIRI</option>
+    <option value="SEABANK">SEABANK</option>
+    <option value="DANA">DANA</option>
+    <option value="GOPAY">GOPAY</option>
+    <option value="OVO">OVO</option>
+  </select>
+  
+  <label>NO REKENING :</label>
+  <input type="text" id="norek" placeholder="Masukkan Nomor Rekening / Akun E-Wallet">
+  
+  <label>NAMA REKENING :</label>
+  <input type="text" id="namarek" placeholder="Masukkan Nama Pemilik Rekening">
+  
+  <div class="preview-box" id="preview">Preview akan muncul di sini...</div>
+  
+  <button onclick="copyText()">Salin</button>
+  
+  <div class="footer">
+    <h3 class="bold-highlight">Layanan Resmi Jasa Penyewaan Akun WhatsApp</h3>
+    <p><span class="bold-highlight">GOGGS</span> merupakan <span class="bold-highlight">Agent Resmi</span> pusat layanan <span class="bold-highlight">Penyewaan Akun WhatsApp</span> terpercaya. Kami menyediakan Jasa Penyewaan Akun WhatsApp dengan rate tertinggi untuk saat ini</p>
+
+    <h3 class="bold-highlight">Keunggulan Kami:</h3>
+    <ol>
+      <li>Harga Tinggi dan Proses Super Simple</li>
+      <li>Selesai Proses Penyewaan Akun WhatsApp 1 - 5 Menit Dana akan masuk di akun Bank kalian</li>
+      <li>Support semua Metode Pembayaran Bank/E-Wallet</li>
+      <li>Layanan costumer service 24 Jam siap membantu</li>
+    </ol>
+
+    <h3 class="bold-highlight">Cara Order Jasa Penyewaan:</h3>
+    <ol>
+      <li>Isi formulir diatas</li>
+      <li>Klik Tombol Salin</li>
+      <li>Paste dan kirimkan kepada kami</li>
+      <li>Selanjutnya tunggu instruksi dari kami untuk melanjutkan Proses Penyewaan Akun WhatsApp</li>
+      <li>Setelah Penyewaan selesai 1 - 5 menit dana akan diterima sesuai dengan Total Chat atau Total Jam</li>
+    </ol>
+
+    <h3 class="bold-highlight">Kontak Kami:</h3>
+    <ul>
+      <li>Facebook: <a href="https://www.facebook.com/share/1CvWgKj6T8/" target="_blank">Goggs FB</a></li>
+      <li>Telegram: <a href="https://t.me/goggsform" target="_blank">@goggsform</a></li>
+      <li>Channel Telegram: <a href="https://t.me/+-3285CEnbXViYjk9" target="_blank">Goggs Channel</a></li>
+      <li>Grup Facebook: <a href="https://m.me/j/AbYLhcX9dwLW-S3_/" target="_blank">Goggs Grup FB</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const fb = document.getElementById("fb");
+  const wa = document.getElementById("wa");
+  const rate = document.getElementById("rate");
+  const bank = document.getElementById("bank");
+  const norek = document.getElementById("norek");
+  const namarek = document.getElementById("namarek");
+  const preview = document.getElementById("preview");
+  
+  function updatePreview() {
+    preview.textContent = 
+      `USERNAME FB: ${fb.value}\n` +
+      `NO WHATSAPP: ${wa.value}\n` +
+      `PERCHAT/PERJAM: ${rate.value}\n` +
+      `JENIS BANK/E-WALLET: ${bank.value}\n` +
+      `NO REKENING: ${norek.value}\n` +
+      `NAMA REKENING: ${namarek.value}`;
+  }
+
+  fb.addEventListener("input", updatePreview);
+  wa.addEventListener("input", updatePreview);
+  rate.addEventListener("input", updatePreview);
+  bank.addEventListener("change", updatePreview);
+  norek.addEventListener("input", updatePreview);
+  namarek.addEventListener("input", updatePreview);
+
+  function copyText() {
+    navigator.clipboard.writeText(preview.textContent)
+      .then(() => alert("Teks berhasil disalin!"))
+      .catch(err => alert("Gagal menyalin teks: " + err));
+  }
+</script>
+
+</body>
+    </html>
